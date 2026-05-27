@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Health Sync Solutions | Credenciamento Hospitalar Inteligente</title>
+
+  <meta
+    name="description"
+    content="A HSS automatiza o credenciamento de profissionais da saúde, valida documentos, monitora procedimentos e reduz custos operacionais para hospitais e clínicas."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  
+  <header class="header" id="topo">
+    <nav class="navbar container" aria-label="Navegação principal">
+      <a class="logo" href="#topo" aria-label="Health Sync Solutions - início">
+        <span class="logo-mark" aria-hidden="true">H</span>
+        <span>
+          <strong>Health Sync</strong>
+          <small>Solutions</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#desafio">Desafio</a>
+        <a href="#solucao">Solução</a>
+        <a href="#funcionamento">Como funciona</a>
+        <a href="#monitoramento">Monitoramento</a>
+        <a href="#economia">Economia</a>
+        <a href="#contato" class="nav-cta">Solicitar demo</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">MedTech Challenge • Credenciamento Hospitalar</span>
+
+          <h1 id="hero-title">Credenciamento hospitalar sem burocracia.</h1>
+
+          <p>
+            A HSS automatiza a entrada de profissionais da saúde, valida documentos,
+            monitora procedimentos realizados e calcula a economia operacional gerada
+            para hospitais, clínicas e redes de atendimento.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#economia" class="btn btn-primary">Simular economia</a>
+            <a href="#solucao" class="btn btn-secondary">Conhecer solução</a>
+          </div>
+
+          <div class="trust-row" aria-label="Principais pilares da solução">
+            <div>
+              <strong>LGPD</strong>
+              <span>Gestão segura de dados</span>
+            </div>
+
+            <div>
+              <strong>4 etapas</strong>
+              <span>Credenciamento simplificado</span>
+            </div>
+
+            <div>
+              <strong>Dashboard</strong>
+              <span>Monitoramento contínuo</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="dashboard-card reveal" aria-label="Painel demonstrativo da plataforma HSS">
+          <div class="dashboard-header">
+            <div>
+              <span class="status-dot" aria-hidden="true"></span>
+              <strong>HSS Credential Center</strong>
+            </div>
+
+            <span class="badge">Operação ativa</span>
+          </div>
+
+          <div class="metric-grid">
+            <article>
+              <span>Tempo de aprovação</span>
+              <strong>-58%</strong>
+              <small>redução estimada</small>
+            </article>
+
+            <article>
+              <span>Pendências documentais</span>
+              <strong>12</strong>
+              <small>em análise</small>
+            </article>
+          </div>
+
+          <div class="credential-list" aria-label="Status de credenciamento">
+            <div>
+              <span class="avatar">MS</span>
+              <p>
+                <strong>Mariana Silva</strong>
+                <small>CRM validado • UTI</small>
+              </p>
+              <b class="status approved">Aprovado</b>
+            </div>
+
+            <div>
+              <span class="avatar">RO</span>
+              <p>
+                <strong>Rafael Oliveira</strong>
+                <small>Certificado pendente • Centro cirúrgico</small>
+              </p>
+              <b class="status pending">Pendente</b>
+            </div>
+
+            <div>
+              <span class="avatar">CA</span>
+              <p>
+                <strong>Carla Andrade</strong>
+                <small>COREN validado • Enfermagem</small>
+              </p>
+              <b class="status approved">Aprovado</b>
+            </div>
+          </div>
+
+          <div class="patient-flow">
+            <div>
+              <span>Documentos</span>
+              <strong>Validados</strong>
+            </div>
+
+            <div>
+              <span>Acesso</span>
+              <strong>Liberado</strong>
+            </div>
+
+            <div>
+              <span>Procedimentos</span>
+              <strong>Monitorados</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section problem" id="desafio" aria-labelledby="desafio-title">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">O desafio</span>
+
+          <h2 id="desafio-title">
+            O credenciamento manual custa tempo, dinheiro e segurança operacional.
+          </h2>
+
+          <p>
+            A entrada de profissionais da saúde em hospitais ainda depende de validações
+            manuais, documentos espalhados, aprovações lentas e pouca rastreabilidade
+            sobre a atuação do profissional.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">📄</span>
+            <h3>Documentos espalhados</h3>
+            <p>
+              Diplomas, registros profissionais, certificados e contratos ficam distribuídos
+              em diferentes canais, dificultando controle e conferência.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">⏳</span>
+            <h3>Validação manual</h3>
+            <p>
+              Equipes administrativas gastam horas verificando documentos, aprovações e
+              pendências antes da liberação do profissional.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <span class="icon" aria-hidden="true">⚠️</span>
+            <h3>Baixa rastreabilidade</h3>
+            <p>
+              Sem uma central de controle, é difícil acompanhar status documental,
+              acessos, procedimentos realizados e conformidade operacional.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section solution" id="solucao" aria-labelledby="solucao-title">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">A solução HSS</span>
+
+          <h2 id="solucao-title">
+            Uma plataforma para credenciar, acompanhar e otimizar a atuação profissional.
+          </h2>
+
+          <p>
+            A Health Sync Solutions centraliza o processo de credenciamento em um fluxo
+            digital, com controle documental, trilha de aprovação, monitoramento de
+            procedimentos e indicadores de custo operacional.
+          </p>
+
+          <div class="feature-list">
+            <div>
+              <span>01</span>
+              <p>Cadastro digital de profissionais com envio estruturado de documentos obrigatórios.</p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <p>Validação de registros profissionais, controle de pendências e trilha de aprovação.</p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <p>Dashboard para acompanhar procedimentos realizados, produtividade e conformidade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="system-map reveal" aria-label="Mapa visual dos módulos da plataforma">
+          <div class="node center">HSS Core</div>
+          <div class="node">Cadastro</div>
+          <div class="node">Documentos</div>
+          <div class="node">Aprovação</div>
+          <div class="node">Procedimentos</div>
+          <div class="node">Economia</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="funcionamento" aria-labelledby="funcionamento-title">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Como funciona</span>
+
+          <h2 id="funcionamento-title">
+            Do cadastro à análise de economia em um fluxo simples.
+          </h2>
+
+          <p>
+            A HSS organiza o processo de entrada do profissional da saúde em etapas claras,
+            rastreáveis e orientadas a dados.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step reveal">
+            <span>1</span>
+            <h3>Envio de documentos</h3>
+            <p>
+              O profissional envia dados pessoais, especialidade, documentos, registros
+              e certificados pela plataforma.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <span>2</span>
+            <h3>Validação digital</h3>
+            <p>
+              A equipe do hospital analisa pendências, aprova registros e acompanha
+              vencimentos de documentos.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <span>3</span>
+            <h3>Acompanhamento de status</h3>
+            <p>
+              Gestores acompanham em tempo real quem está pendente, aprovado, em análise
+              ou com documentação vencida.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <span>4</span>
+            <h3>Monitoramento e custos</h3>
+            <p>
+              A instituição acompanha procedimentos realizados, produtividade e economia
+              gerada pela digitalização.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section monitoring" id="monitoramento" aria-labelledby="monitoramento-title">
+      <div class="container monitoring-grid">
+        <div class="reveal">
+          <span class="eyebrow">Monitoramento</span>
+
+          <h2 id="monitoramento-title">
+            Visibilidade sobre cada profissional e cada procedimento.
+          </h2>
+
+          <p>
+            Além de simplificar a admissão do profissional, a HSS permite acompanhar sua
+            atuação dentro da instituição, fortalecendo gestão, conformidade e tomada de decisão.
+          </p>
+
+          <ul class="check-list">
+            <li>Nome do profissional, especialidade e setor de atuação.</li>
+            <li>Procedimentos realizados, data, status e produtividade.</li>
+            <li>Alertas para documentação vencida ou pendente.</li>
+            <li>Indicadores de conformidade e custo operacional.</li>
+          </ul>
+        </div>
+
+        <div class="procedure-table reveal" role="region" aria-label="Tabela demonstrativa de procedimentos monitorados">
+          <div class="table-row table-head">
+            <span>Profissional</span>
+            <span>Setor</span>
+            <span>Procedimentos</span>
+            <span>Status</span>
+          </div>
+
+          <div class="table-row">
+            <span>Mariana Silva</span>
+            <span>UTI</span>
+            <span>18</span>
+            <b class="status approved">Regular</b>
+          </div>
+
+          <div class="table-row">
+            <span>Rafael Oliveira</span>
+            <span>Centro cirúrgico</span>
+            <span>9</span>
+            <b class="status pending">Pendente</b>
+          </div>
+
+          <div class="table-row">
+            <span>Carla Andrade</span>
+            <span>Enfermagem</span>
+            <span>27</span>
+            <b class="status approved">Regular</b>
+          </div>
+
+          <div class="table-row">
+            <span>Bruno Lima</span>
+            <span>Pronto atendimento</span>
+            <span>14</span>
+            <b class="status review">Revisão</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section economy" id="economia" aria-labelledby="economia-title">
+      <div class="container economy-grid">
+        <div class="economy-content reveal">
+          <span class="eyebrow">Simulador de economia operacional</span>
+
+          <h2 id="economia-title">
+            Visualize quanto a burocracia do credenciamento pode custar.
+          </h2>
+
+          <p>
+            Estime o custo mensal do processo manual de credenciamento e compare com a
+            economia potencial gerada pela digitalização da admissão de profissionais da saúde.
+          </p>
+
+          <div class="economy-highlights">
+            <div>
+              <strong>Menos retrabalho</strong>
+              <span>redução de tarefas manuais</span>
+            </div>
+
+            <div>
+              <strong>Mais previsibilidade</strong>
+              <span>custos administrativos claros</span>
+            </div>
+
+            <div>
+              <strong>Decisão baseada em dados</strong>
+              <span>estimativa objetiva de economia</span>
+            </div>
+          </div>
+        </div>
+
+        <form
+          class="calculator-card premium-calculator reveal"
+          id="calculatorForm"
+          aria-label="Simulador de economia operacional"
+        >
+          <div class="calculator-header">
+            <div>
+              <span class="calculator-kicker">HSS Calculator</span>
+              <h3>Simulador de Economia</h3>
+            </div>
+
+            <span class="calculator-badge">Estimativa</span>
+          </div>
+
+          <div class="calculator-grid">
+            <label for="professionals">
+              <span>Profissionais/mês</span>
+              <input type="number" id="professionals" min="1" value="40" required />
+            </label>
+
+            <label for="hours">
+              <span>Horas por credenciamento</span>
+              <input type="number" id="hours" min="1" step="0.5" value="3" required />
+            </label>
+
+            <label for="hourCost">
+              <span>Custo por hora administrativa</span>
+              <input type="number" id="hourCost" min="1" step="1" value="55" required />
+            </label>
+
+            <label for="reduction">
+              <span>Redução estimada com HSS (%)</span>
+              <input type="number" id="reduction" min="1" max="90" value="45" required />
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-button">
+            Calcular economia
+          </button>
+
+          <div class="results" id="calculatorResults" aria-live="polite">
+            <div class="result-card">
+              <span>Custo mensal atual</span>
+              <strong id="currentCost">R$ 6.600,00</strong>
+            </div>
+
+            <div class="result-card">
+              <span>Custo estimado com HSS</span>
+              <strong id="newCost">R$ 3.630,00</strong>
+            </div>
+
+            <div class="result-card highlight-result">
+              <span>Economia mensal</span>
+              <strong id="monthlySaving">R$ 2.970,00</strong>
+            </div>
+
+            <div class="result-card highlight-result">
+              <span>Economia anual</span>
+              <strong id="annualSaving">R$ 35.640,00</strong>
+            </div>
+          </div>
+
+          <p class="calculator-note">
+            Fórmula: profissionais por mês × horas por credenciamento × custo/hora administrativa.
+            A economia é estimada aplicando o percentual de redução operacional informado.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section benefits" id="beneficios" aria-labelledby="beneficios-title">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Benefícios</span>
+
+          <h2 id="beneficios-title">
+            Menos burocracia, mais controle e melhor gestão hospitalar.
+          </h2>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit reveal">
+            <strong>Admissão mais rápida</strong>
+            <p>Reduz o tempo entre envio de documentos, aprovação e liberação do profissional.</p>
+          </article>
+
+          <article class="benefit reveal">
+            <strong>Controle documental</strong>
+            <p>Centraliza registros, vencimentos, pendências e histórico de validação.</p>
+          </article>
+
+          <article class="benefit reveal">
+            <strong>Menor custo administrativo</strong>
+            <p>Ajuda a visualizar custos internos e oportunidades de redução de gastos.</p>
+          </article>
+
+          <article class="benefit reveal">
+            <strong>Gestão de performance</strong>
+            <p>Permite acompanhar procedimentos, setores, produtividade e conformidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section security" aria-labelledby="security-title">
+      <div class="container impact-box reveal">
+        <div>
+          <span class="eyebrow">Segurança e conformidade</span>
+
+          <h2 id="security-title">
+            Governança para dados sensíveis em ambientes hospitalares.
+          </h2>
+
+          <p>
+            A proposta considera boas práticas de privacidade, rastreabilidade, controle de acesso
+            e organização documental, respeitando a importância da proteção de dados no setor da saúde.
+          </p>
+        </div>
+
+        <div class="impact-numbers">
+          <div>
+            <strong>LGPD</strong>
+            <span>base de privacidade</span>
+          </div>
+
+          <div>
+            <strong>Logs</strong>
+            <span>histórico de ações</span>
+          </div>
+
+          <div>
+            <strong>Acesso</strong>
+            <span>perfis por função</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato" aria-labelledby="contato-title">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Captação de lead</span>
+
+          <h2 id="contato-title">
+            Quer reduzir a burocracia no credenciamento da sua instituição?
+          </h2>
+
+          <p>
+            Preencha o formulário para registrar interesse na solução. O sistema valida os campos,
+            gera um protocolo de atendimento e registra os dados localmente para simular um fluxo
+            funcional de captação de leads.
+          </p>
+
+          <div class="contact-note">
+            <strong>Ideal para:</strong>
+            <span>Hospitais • Clínicas • Redes de atendimento • Operadoras de saúde</span>
+          </div>
+        </div>
+
+        <form class="lead-form reveal" id="leadForm" novalidate>
+          <label for="name">
+            Nome completo
+            <input type="text" id="name" name="nome" placeholder="Ex: Ana Souza" required />
+          </label>
+
+          <label for="company">
+            Empresa / Instituição
+            <input type="text" id="company" name="empresa" placeholder="Ex: Hospital Vida+" required />
+          </label>
+
+          <label for="role">
+            Cargo
+            <input type="text" id="role" name="cargo" placeholder="Ex: Diretora de Operações" required />
+          </label>
+
+          <label for="email">
+            E-mail corporativo
+            <input type="email" id="email" name="email" placeholder="ana@empresa.com" required />
+          </label>
+
+          <label for="monthly">
+            Profissionais credenciados por mês
+            <input type="number" id="monthly" name="profissionais" min="1" placeholder="Ex: 40" required />
+          </label>
+
+          <label for="challenge">
+            Principal desafio
+            <select id="challenge" name="desafio" required>
+              <option value="">Selecione uma opção</option>
+              <option>Reduzir burocracia</option>
+              <option>Validar documentos</option>
+              <option>Monitorar procedimentos</option>
+              <option>Calcular custos de credenciamento</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn btn-primary form-button">
+            Enviar interesse
+          </button>
+
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a class="logo" href="#topo" aria-label="Health Sync Solutions - início">
+        <span class="logo-mark" aria-hidden="true">H</span>
+        <span>
+          <strong>Health Sync</strong>
+          <small>Solutions</small>
+        </span>
+      </a>
+
+      <div class="footer-links">
+        <a href="#desafio">Desafio</a>
+        <a href="#solucao">Solução</a>
+        <a href="#economia">Economia</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#contato" class="floating-cta" aria-label="Solicitar demonstração">
+    Solicitar demo
+  </a>
+
+  <script src="./script.js"></script>
+</body>
+</html>
