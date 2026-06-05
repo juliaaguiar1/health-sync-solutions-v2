@@ -1,21 +1,102 @@
-# Health Sync Solutions — Landing Page
+# Health Sync Solutions
 
-Projeto acadêmico para o Enterprise Challenge — FIAP.
+## Enterprise Challenge - FIAP
 
-## Como usar no VS Code
+Projeto desenvolvido para o Enterprise Challenge da FIAP em parceria com a Health Sync Solutions.
 
-1. Abra a pasta `hss-landing-page` no VS Code.
-2. Instale a extensão Live Server, se ainda não tiver.
-3. Clique com o botão direito no `index.html`.
-4. Clique em "Open with Live Server".
+## Sobre o Projeto
 
-## Arquivos
+A Health Sync Solutions (HSS) é uma solução digital voltada para a automação do processo de credenciamento hospitalar.
 
-- `index.html`: estrutura da landing page
-- `styles.css`: identidade visual e responsividade
-- `script.js`: navegação mobile, animações e formulário fake
-- `script.ts`: versão em TypeScript do JavaScript, opcional
+O objetivo do projeto é reduzir burocracias administrativas, otimizar a validação documental, acompanhar procedimentos realizados por profissionais da saúde e demonstrar os ganhos financeiros da digitalização através de uma calculadora de ROI.
 
-## Observação
+---
 
-O formulário é apenas visual, como solicitado na Etapa 1. Ele não envia dados reais.
+## Funcionalidades
+
+### Landing Page Institucional
+- Apresentação do problema enfrentado por hospitais e clínicas.
+- Explicação da solução Health Sync Solutions.
+- Fluxo de funcionamento da plataforma.
+- Demonstração de monitoramento operacional.
+- Navegação intuitiva e responsiva.
+
+### Calculadora de ROI
+Permite simular:
+
+- Custo operacional atual.
+- Economia mensal.
+- Economia anual.
+- Retorno sobre investimento (ROI).
+- Tempo estimado de payback.
+- Horas economizadas por mês.
+
+### Captação de Leads
+Formulário funcional com:
+
+- Validação de campos.
+- Geração de protocolo.
+- Armazenamento local utilizando LocalStorage.
+- Feedback visual para o usuário.
+
+### Responsividade
+Compatível com:
+
+- Desktop
+- Tablet
+- Smartphones
+
+### Acessibilidade
+Implementação de:
+
+- Labels em formulários.
+- Aria-labels.
+- Navegação semântica.
+- Estrutura HTML acessível.
+
+---
+
+## Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- Git
+- GitHub
+- Vercel
+
+---
+
+## Estrutura do Projeto
+
+```text
+health-sync-solutions-v2/
+│
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
+```
+
+## Deploy
+
+Site publicado:
+
+https://health-sync-solutions-v2.vercel.app
+
+---
+
+## Repositório
+
+GitHub:
+
+https://github.com/juliaaguiar1/health-sync-solutions-v2
+
+---
+
+## Desenvolvido por
+
+Julia Aguiar
+
+Enterprise Challenge – FIAP
+2026

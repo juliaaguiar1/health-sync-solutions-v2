@@ -23,7 +23,6 @@
 </head>
 
 <body>
-  
   <header class="header" id="topo">
     <nav class="navbar container" aria-label="Navegação principal">
       <a class="logo" href="#topo" aria-label="Health Sync Solutions - início">
@@ -51,7 +50,7 @@
         <a href="#solucao">Solução</a>
         <a href="#funcionamento">Como funciona</a>
         <a href="#monitoramento">Monitoramento</a>
-        <a href="#economia">Economia</a>
+        <a href="#economia">ROI</a>
         <a href="#contato" class="nav-cta">Solicitar demo</a>
       </div>
     </nav>
@@ -67,12 +66,12 @@
 
           <p>
             A HSS automatiza a entrada de profissionais da saúde, valida documentos,
-            monitora procedimentos realizados e calcula a economia operacional gerada
+            monitora procedimentos realizados e calcula o retorno financeiro gerado
             para hospitais, clínicas e redes de atendimento.
           </p>
 
           <div class="hero-actions">
-            <a href="#economia" class="btn btn-primary">Simular economia</a>
+            <a href="#economia" class="btn btn-primary">Calcular ROI</a>
             <a href="#solucao" class="btn btn-secondary">Conhecer solução</a>
           </div>
 
@@ -253,7 +252,7 @@
           <div class="node">Documentos</div>
           <div class="node">Aprovação</div>
           <div class="node">Procedimentos</div>
-          <div class="node">Economia</div>
+          <div class="node">ROI</div>
         </div>
       </div>
     </section>
@@ -264,7 +263,7 @@
           <span class="eyebrow">Como funciona</span>
 
           <h2 id="funcionamento-title">
-            Do cadastro à análise de economia em um fluxo simples.
+            Do cadastro à análise de ROI em um fluxo simples.
           </h2>
 
           <p>
@@ -303,10 +302,10 @@
 
           <article class="step reveal">
             <span>4</span>
-            <h3>Monitoramento e custos</h3>
+            <h3>Monitoramento e ROI</h3>
             <p>
-              A instituição acompanha procedimentos realizados, produtividade e economia
-              gerada pela digitalização.
+              A instituição acompanha procedimentos realizados, produtividade, economia
+              gerada e retorno financeiro estimado.
             </p>
           </article>
         </div>
@@ -375,103 +374,107 @@
     </section>
 
     <section class="section economy" id="economia" aria-labelledby="economia-title">
-      <div class="container economy-grid">
-        <div class="economy-content reveal">
-          <span class="eyebrow">Simulador de economia operacional</span>
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Calculadora de ROI</span>
 
           <h2 id="economia-title">
-            Visualize quanto a burocracia do credenciamento pode custar.
+            Descubra o retorno financeiro da automação do credenciamento hospitalar.
           </h2>
 
           <p>
-            Estime o custo mensal do processo manual de credenciamento e compare com a
-            economia potencial gerada pela digitalização da admissão de profissionais da saúde.
+            Avalie o impacto financeiro da digitalização do processo de credenciamento
+            e descubra quanto sua instituição pode economizar com a Health Sync Solutions.
           </p>
-
-          <div class="economy-highlights">
-            <div>
-              <strong>Menos retrabalho</strong>
-              <span>redução de tarefas manuais</span>
-            </div>
-
-            <div>
-              <strong>Mais previsibilidade</strong>
-              <span>custos administrativos claros</span>
-            </div>
-
-            <div>
-              <strong>Decisão baseada em dados</strong>
-              <span>estimativa objetiva de economia</span>
-            </div>
-          </div>
         </div>
 
-        <form
-          class="calculator-card premium-calculator reveal"
-          id="calculatorForm"
-          aria-label="Simulador de economia operacional"
-        >
-          <div class="calculator-header">
+        <form class="roi-calculator reveal" id="calculatorForm" aria-label="Calculadora de ROI">
+          <div class="roi-header">
             <div>
-              <span class="calculator-kicker">HSS Calculator</span>
-              <h3>Simulador de Economia</h3>
+              <span class="calculator-kicker">ROI CENTER</span>
+              <h3>Calculadora Estratégica de ROI</h3>
             </div>
 
-            <span class="calculator-badge">Estimativa</span>
+            <span class="roi-badge">Health Sync Solutions</span>
           </div>
 
           <div class="calculator-grid">
             <label for="professionals">
-              <span>Profissionais/mês</span>
+              <span>Profissionais credenciados por mês</span>
               <input type="number" id="professionals" min="1" value="40" required />
             </label>
 
             <label for="hours">
-              <span>Horas por credenciamento</span>
+              <span>Horas gastas por credenciamento</span>
               <input type="number" id="hours" min="1" step="0.5" value="3" required />
             </label>
 
             <label for="hourCost">
-              <span>Custo por hora administrativa</span>
-              <input type="number" id="hourCost" min="1" step="1" value="55" required />
+              <span>Custo administrativo por hora (R$)</span>
+              <input type="number" id="hourCost" min="1" value="55" required />
             </label>
 
             <label for="reduction">
-              <span>Redução estimada com HSS (%)</span>
+              <span>Redução operacional estimada (%)</span>
               <input type="number" id="reduction" min="1" max="90" value="45" required />
+            </label>
+
+            <label class="full-width" for="investment">
+              <span>Investimento mensal na HSS (R$)</span>
+              <input type="number" id="investment" min="1" value="2500" required />
             </label>
           </div>
 
           <button type="submit" class="btn btn-primary form-button">
-            Calcular economia
+            Calcular ROI
           </button>
 
-          <div class="results" id="calculatorResults" aria-live="polite">
+          <div class="roi-results" aria-live="polite">
             <div class="result-card">
-              <span>Custo mensal atual</span>
-              <strong id="currentCost">R$ 6.600,00</strong>
+              <span>Custo Operacional Atual</span>
+              <strong id="currentCost">R$ 0,00</strong>
             </div>
 
             <div class="result-card">
-              <span>Custo estimado com HSS</span>
-              <strong id="newCost">R$ 3.630,00</strong>
+              <span>Economia Mensal</span>
+              <strong id="monthlySaving">R$ 0,00</strong>
             </div>
 
-            <div class="result-card highlight-result">
-              <span>Economia mensal</span>
-              <strong id="monthlySaving">R$ 2.970,00</strong>
+            <div class="result-card">
+              <span>Economia Anual</span>
+              <strong id="annualSaving">R$ 0,00</strong>
             </div>
 
-            <div class="result-card highlight-result">
-              <span>Economia anual</span>
-              <strong id="annualSaving">R$ 35.640,00</strong>
+            <div class="result-card roi-highlight">
+              <span>ROI</span>
+              <strong id="roiValue">0%</strong>
+            </div>
+
+            <div class="result-card">
+              <span>Payback</span>
+              <strong id="paybackValue">0 meses</strong>
+            </div>
+
+            <div class="result-card">
+              <span>Horas Economizadas</span>
+              <strong id="hoursSaved">0h</strong>
             </div>
           </div>
 
-          <p class="calculator-note">
-            Fórmula: profissionais por mês × horas por credenciamento × custo/hora administrativa.
-            A economia é estimada aplicando o percentual de redução operacional informado.
-          </p>
+          <div class="roi-insight">
+            <h4>Resumo Executivo</h4>
+            <p id="roiSummary">
+              Preencha os dados para visualizar o impacto financeiro da automação do credenciamento.
+            </p>
+          </div>
+
+          <div class="benchmark-box">
+            <strong>Benchmark de Mercado</strong>
+            <p>
+              Instituições que reduzem mais de 40% das tarefas administrativas costumam
+              recuperar o investimento em automação em menos de 12 meses.
+            </p>
+          </div>
         </form>
       </div>
     </section>
@@ -625,7 +628,7 @@
       <div class="footer-links">
         <a href="#desafio">Desafio</a>
         <a href="#solucao">Solução</a>
-        <a href="#economia">Economia</a>
+        <a href="#economia">ROI</a>
         <a href="#contato">Contato</a>
       </div>
     </div>
@@ -635,6 +638,6 @@
     Solicitar demo
   </a>
 
-  <script src="./script.js"></script>
+  <script src="./script.js?v=3"></script>
 </body>
 </html>

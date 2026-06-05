@@ -1,3 +1,5 @@
+console.log("VERSAO NOVA ROI");
+
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 const leadForm = document.getElementById("leadForm");
@@ -9,17 +11,19 @@ const currency = new Intl.NumberFormat("pt-BR", {
   currency: "BRL"
 });
 
-menuButton?.addEventListener("click", () => {
-  const isOpen = navLinks?.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(Boolean(isOpen)));
-});
-
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks?.classList.remove("open");
-    menuButton?.setAttribute("aria-expanded", "false");
+if (menuButton && navLinks) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
   });
-});
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -41,63 +45,107 @@ function updateCalculator() {
   const hours = Number(document.getElementById("hours")?.value || 0);
   const hourCost = Number(document.getElementById("hourCost")?.value || 0);
   const reduction = Number(document.getElementById("reduction")?.value || 0);
+  const investment = Number(document.getElementById("investment")?.value || 0);
 
   const currentCost = professionals * hours * hourCost;
   const monthlySaving = currentCost * (reduction / 100);
-  const newCost = currentCost - monthlySaving;
   const annualSaving = monthlySaving * 12;
+  const hoursSaved = professionals * hours * (reduction / 100);
 
-  document.getElementById("currentCost").textContent = currency.format(currentCost);
-  document.getElementById("newCost").textContent = currency.format(newCost);
-  document.getElementById("monthlySaving").textContent = currency.format(monthlySaving);
-  document.getElementById("annualSaving").textContent = currency.format(annualSaving);
-}
+  const roi = investment > 0
+    ? ((monthlySaving - investment) / investment) * 100
+    : 0;
 
-calculatorForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  updateCalculator();
-});
+  const payback = monthlySaving > 0
+    ? investment / monthlySaving
+    : 0;
 
-["professionals", "hours", "hourCost", "reduction"].forEach((id) => {
-  document.getElementById(id)?.addEventListener("input", updateCalculator);
-});
+  const currentCostElement = document.getElementById("currentCost");
+  const monthlySavingElement = document.getElementById("monthlySaving");
+  const annualSavingElement = document.getElementById("annualSaving");
+  const roiValueElement = document.getElementById("roiValue");
+  const paybackValueElement = document.getElementById("paybackValue");
+  const hoursSavedElement = document.getElementById("hoursSaved");
+  const roiSummaryElement = document.getElementById("roiSummary");
 
-updateCalculator();
-
-leadForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  if (!leadForm.checkValidity()) {
-    formFeedback.textContent = "Preencha todos os campos obrigatórios corretamente.";
-    formFeedback.classList.add("error");
-    leadForm.reportValidity();
-    return;
+  if (currentCostElement) {
+    currentCostElement.textContent = currency.format(currentCost);
   }
 
-  const formData = new FormData(leadForm);
+  if (monthlySavingElement) {
+    monthlySavingElement.textContent = currency.format(monthlySaving);
+  }
 
-  const lead = {
-    nome: formData.get("nome"),
-    empresa: formData.get("empresa"),
-    cargo: formData.get("cargo"),
-    email: formData.get("email"),
-    profissionais: formData.get("profissionais"),
-    desafio: formData.get("desafio"),
-    protocolo: `HSS-${Date.now()}`,
-    dataEnvio: new Date().toLocaleString("pt-BR")
-  };
+  if (annualSavingElement) {
+    annualSavingElement.textContent = currency.format(annualSaving);
+  }
 
-  const savedLeads = JSON.parse(localStorage.getItem("hssLeads") || "[]");
+  if (roiValueElement) {
+    roiValueElement.textContent = `${roi.toFixed(1)}%`;
+  }
 
-  savedLeads.push(lead);
+  if (paybackValueElement) {
+    paybackValueElement.textContent = `${payback.toFixed(1)} meses`;
+  }
 
-  localStorage.setItem("hssLeads", JSON.stringify(savedLeads));
+  if (hoursSavedElement) {
+    hoursSavedElement.textContent = `${hoursSaved.toFixed(0)}h/mês`;
+  }
 
-  console.log("Lead registrado:", lead);
-  console.table(savedLeads);
+  if (roiSummaryElement) {
+    roiSummaryElement.textContent =
+      `Com base nos dados informados, a Health Sync Solutions pode gerar uma economia anual estimada de ${currency.format(annualSaving)}. O retorno sobre o investimento é de ${roi.toFixed(1)}% e o payback estimado é de ${payback.toFixed(1)} meses.`;
+  }
+}
 
-  formFeedback.classList.remove("error");
-  formFeedback.textContent = `Obrigado, ${lead.nome}! Seu interesse foi registrado com sucesso. Protocolo: ${lead.protocolo}`;
+if (calculatorForm) {
+  calculatorForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    updateCalculator();
+  });
 
-  leadForm.reset();
-});
+  ["professionals", "hours", "hourCost", "reduction", "investment"].forEach((id) => {
+    document.getElementById(id)?.addEventListener("input", updateCalculator);
+  });
+
+  updateCalculator();
+}
+
+if (leadForm && formFeedback) {
+  leadForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!leadForm.checkValidity()) {
+      formFeedback.textContent = "Preencha todos os campos obrigatórios corretamente.";
+      leadForm.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(leadForm);
+
+    const lead = {
+      nome: formData.get("nome"),
+      empresa: formData.get("empresa"),
+      cargo: formData.get("cargo"),
+      email: formData.get("email"),
+      profissionais: formData.get("profissionais"),
+      desafio: formData.get("desafio"),
+      protocolo: `HSS-${Date.now()}`,
+      dataEnvio: new Date().toLocaleString("pt-BR")
+    };
+
+    const savedLeads = JSON.parse(localStorage.getItem("hssLeads") || "[]");
+
+    savedLeads.push(lead);
+
+    localStorage.setItem("hssLeads", JSON.stringify(savedLeads));
+
+    console.log("Lead registrado:", lead);
+    console.table(savedLeads);
+
+    formFeedback.textContent =
+      `Obrigado, ${lead.nome}! Sua demonstração foi solicitada com sucesso. Protocolo: ${lead.protocolo}`;
+
+    leadForm.reset();
+  });
+}
